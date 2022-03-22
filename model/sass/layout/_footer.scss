@@ -1,0 +1,33 @@
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat (5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+    background-color: $gris-sombre;
+    color: $txt-fond-sombre;
+    padding: 1.875rem;
+
+    & li {
+        display: inline-block; 
+        width: 100%;  
+    }
+
+    & a {
+       display: block;
+       position: relative;
+       padding: 0 0 0.7rem 0;
+       color: $txt-fond-sombre;
+    }
+    & img {
+        filter: invert(100%);
+        width: 6rem;
+        padding-bottom: 1rem;
+    }
+    .list {
+        margin-right: 0.5rem;
+        width: 1.2rem;   
+    }
+       
+}
+
