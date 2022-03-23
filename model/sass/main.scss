@@ -281,34 +281,32 @@ main {
                         font-weight: 600;
                             }
                 
-                        & span {
-                            position: absolute;
-                            top: 0;
-                            right: -5rem;
-                            width: 5rem;
-                            height: 100%;
-                            font-size: 1.5em;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            color: $txt-fond-sombre;
-                            background: $aqua-tertiaire;
-                            transition: all 0.5s;
-
-                            &:hover {
-                             position: absolute;   
-                            }
-
-                        }
-                        & i {
-                            transform: rotate(0deg);
-                        } 
-                        & .fa-check-circle {
-                            /*margin-left: -25px;*/
-                            transform: rotate(-240deg);
-                            transition: all 0.5s;
-
-                            }
+                            & span {
+                                position: absolute;
+                                top: 0;
+                                right: -5rem;
+                                width: 5rem;
+                                height: 100%;
+                                font-size: 1.5em;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: $txt-fond-sombre;
+                                background-color: $aqua-tertiaire;
+                                transition: all 0.5s;
+                    
+                                & .fa-check-circle {
+                                  transform: rotate(-240deg);
+                                  transition: all 0.5s;
+                                }
+                              }
+                              &:hover span {
+                                margin-right: 5rem;
+                    
+                                & i {
+                                  transform: rotate(0deg);
+                                }
+                              }
  
                        
                     }

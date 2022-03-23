@@ -377,19 +377,18 @@ main .menuDuResto__carte ul .list-item:hover span {
   justify-content: center;
   align-items: center;
   color: #ffffff;
-  background: #99E2D0;
+  background-color: #99E2D0;
   transition: all 0.5s;
 }
-main .menuDuResto__carte ul .list-item:hover span:hover {
-  position: absolute;
-}
-main .menuDuResto__carte ul .list-item:hover i {
-  transform: rotate(0deg);
-}
-main .menuDuResto__carte ul .list-item:hover .fa-check-circle {
-  /*margin-left: -25px;*/
+main .menuDuResto__carte ul .list-item:hover span .fa-check-circle {
   transform: rotate(-240deg);
   transition: all 0.5s;
+}
+main .menuDuResto__carte ul .list-item:hover:hover span {
+  margin-right: 5rem;
+}
+main .menuDuResto__carte ul .list-item:hover:hover span i {
+  transform: rotate(0deg);
 }
 
 @media (max-width: 1023px) {
