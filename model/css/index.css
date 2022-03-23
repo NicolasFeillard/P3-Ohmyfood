@@ -123,14 +123,27 @@ footer .list {
     z-index: -10;
   }
 }
-.loader {
+@keyframes spinner-border {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+.spinner {
   position: fixed;
   height: 100%;
   width: 100%;
   left: 0;
   top: 0;
   background-color: rgba(255, 255, 255, 0.9);
-  animation: loader 0.03s;
+  animation: loader 0.01s;
   animation-delay: 1.75s;
   animation-fill-mode: both;
   z-index: 10000;
@@ -138,27 +151,23 @@ footer .list {
   align-items: center;
   justify-content: center;
 }
-.loader__item {
-  height: 1rem;
-  width: 1rem;
-  border-radius: 1rem;
-  animation-iteration-count: 1;
-}
-.loader__itemContainer {
-  display: flex;
-  width: 5rem;
-  justify-content: space-between;
-}
-.loader__item--1 {
-  background-color: #9356DC;
-}
-.loader__item--2 {
-  background-color: #FF79DA;
-  animation-delay: 0.25s;
-}
-.loader__item--3 {
-  background-color: #99E2D0;
-  animation-delay: 0.5s;
+.spinner__border {
+  border-top: 0.5rem solid #9356DC;
+  border-bottom: 0.5rem solid #9356DC;
+  border-left: 0.5rem solid #99E2D0;
+  border-right: 0.5rem solid #FF79DA;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: spinner-border 2s linear;
+  z-index: 10;
+  visibility: hidden;
 }
 
 main {
@@ -338,11 +347,9 @@ main .menuDuResto__carte ul .list-item {
   animation: itemAppear 2s;
 }
 main .menuDuResto__carte ul .list-item:hover {
-  transform: rotate(0deg);
-}
-main .menuDuResto__carte ul .list-item:hover h4 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.1em;
+  position: main .menuDuResto__carte ul .list-item:hover h4;
+  position-margin: 0 0 0.5rem 0;
+  position-font-size: 1.1em;
 }
 main .menuDuResto__carte ul .list-item:hover p {
   font-size: 1em;
@@ -383,4 +390,12 @@ main .menuDuResto__carte ul .list-item:hover .fa-check-circle {
   /*margin-left: -25px;*/
   transform: rotate(-240deg);
   transition: all 0.5s;
+}
+
+@media (max-width: 1023px) {
+  .commentCaMarche {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
 }

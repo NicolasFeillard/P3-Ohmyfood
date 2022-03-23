@@ -7,49 +7,40 @@
 @import '_animation';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
-.loader {
+.spinner {
     position: fixed;
     height: 100%;
     width: 100%;
     left: 0;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.90);
-    animation: loader 0.03s;
+    background-color: rgba(255, 255, 255, 0.9);
+    animation: loader 0.01s;
     animation-delay: 1.75s;
     animation-fill-mode: both;
     z-index: 10000;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  
-    &__item {
-      height: 1rem;
-      width: 1rem;
-      border-radius: 1rem;
-
-      animation-iteration-count: 1;
-  
-      &Container {
-        display: flex;
-        width: 5rem;
-        justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      &__border {
+          border-top: 0.5rem solid $violet-primaire;
+          border-bottom: 0.5rem solid $violet-primaire;
+          border-left: 0.5rem solid $aqua-tertiaire;
+          border-right: 0.5rem solid $rose-secondaire;
+          border-radius: 50%;
+          width: 100px;
+          height: 100px;
+          margin: auto;
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          animation: spinner-border 2s linear;
+          z-index: 10;
+          visibility: hidden;
       }
   
-      &--1 {
-        background-color: $violet-primaire;
-      }
-  
-      &--2 {
-        background-color: $rose-secondaire;
-        animation-delay: 0.25s;
-      }
-  
-      &--3 {
-        background-color: $aqua-tertiaire;
-        animation-delay: 0.5s;
-      }
-    }
-}
+  }
 main {
     font-family: 'Roboto', sans-serif;
 
@@ -265,7 +256,7 @@ main {
                     animation: itemAppear 2s;
 
                 &:hover {
-                    transform: rotate(0deg);
+                  position:  
                         
                 
                     & h4 {
@@ -305,7 +296,7 @@ main {
                             transition: all 0.5s;
 
                             &:hover {
-                                position: absolute;
+                             position: absolute;   
                             }
 
                         }
@@ -326,10 +317,28 @@ main {
                   
             }
             
+            
         }
         
     }
     
+}
+
+//responsive
+//tablette
+@media (max-width: 1023px) {
+
+    .commentCaMarche {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+       
+    }
+}
+
+// Smartphone
+@media (max-width: 767px) {
+
 }
     
         
