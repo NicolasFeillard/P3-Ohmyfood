@@ -346,12 +346,11 @@ main .menuDuResto__carte ul .list-item {
   font-size: 1.05em;
   animation: itemAppear 2s;
 }
-main .menuDuResto__carte ul .list-item:hover {
-  position: main .menuDuResto__carte ul .list-item:hover h4;
-  position-margin: 0 0 0.5rem 0;
-  position-font-size: 1.1em;
+main .menuDuResto__carte ul .list-item h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1em;
 }
-main .menuDuResto__carte ul .list-item:hover p {
+main .menuDuResto__carte ul .list-item p {
   font-size: 1em;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -359,14 +358,14 @@ main .menuDuResto__carte ul .list-item:hover p {
   overflow: hidden;
   transition: all 0.5s;
 }
-main .menuDuResto__carte ul .list-item:hover strong {
+main .menuDuResto__carte ul .list-item strong {
   position: absolute;
   right: 2rem;
   bottom: 1rem;
   transition: all 0.5s;
   font-weight: 600;
 }
-main .menuDuResto__carte ul .list-item:hover span {
+main .menuDuResto__carte ul .list-item span {
   position: absolute;
   top: 0;
   right: -5rem;
@@ -380,14 +379,14 @@ main .menuDuResto__carte ul .list-item:hover span {
   background-color: #99E2D0;
   transition: all 0.5s;
 }
-main .menuDuResto__carte ul .list-item:hover span .fa-check-circle {
+main .menuDuResto__carte ul .list-item span .fa-check-circle {
   transform: rotate(-240deg);
   transition: all 0.5s;
 }
-main .menuDuResto__carte ul .list-item:hover:hover span {
+main .menuDuResto__carte ul .list-item:hover span {
   margin-right: 5rem;
 }
-main .menuDuResto__carte ul .list-item:hover:hover span i {
+main .menuDuResto__carte ul .list-item:hover span i {
   transform: rotate(0deg);
 }
 
