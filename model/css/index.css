@@ -99,24 +99,18 @@ footer a {
   padding: 0 0 0.7rem 0;
   color: #ffffff;
 }
+footer a .fa-utensils {
+  padding: 0 1rem 0 0;
+}
+footer a .fa-hands-helping {
+  padding: 0 0.55rem 0 0;
+}
 footer img {
   filter: invert(100%);
   width: 6rem;
   padding-bottom: 1rem;
 }
-footer .list {
-  margin-right: 0.5rem;
-  width: 1.2rem;
-}
 
-@keyframes itemAppear {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 @keyframes loader {
   100% {
     opacity: 0;
@@ -211,6 +205,20 @@ main .commentCaMarche ol {
   justify-self: normal;
   counter-reset: chiffre;
 }
+@media (max-width: 960px) {
+  main .commentCaMarche ol {
+    grid-row: 3 / auto;
+    grid-column: 1 / 3;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 680px) {
+  main .commentCaMarche ol {
+    grid-row: 3 / auto;
+    grid-column: 1 / 3;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 main .commentCaMarche .list-item::before {
   counter-increment: chiffre;
   content: counter(chiffre);
@@ -253,6 +261,20 @@ main .lesRestaurants ul {
   grid-gap: 2em;
   justify-self: normal;
   margin: 1em 0;
+}
+@media (max-width: 1270px) {
+  main .lesRestaurants ul {
+    grid-row: 2 / auto;
+    grid-column: 1 / 3;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 680px) {
+  main .lesRestaurants ul {
+    grid-row: 2 / auto;
+    grid-column: 1 / 2;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 main .lesRestaurants ul li {
   display: inline-block;
@@ -338,23 +360,41 @@ main .menuDuResto__carte ul {
   margin: 1em 0 2.5em;
   justify-self: normal;
 }
+@media (max-width: 1270px) {
+  main .menuDuResto__carte ul {
+    grid-row: 3 / auto;
+    grid-column: 1 / 3;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 970px) {
+  main .menuDuResto__carte ul {
+    grid-row: 3 / auto;
+    grid-column: 1 / 3;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 main .menuDuResto__carte ul .list-item {
   position: relative;
   padding: 1em;
   cursor: pointer;
   overflow: hidden;
   font-size: 1.05em;
-  animation: itemAppear 2s;
 }
 main .menuDuResto__carte ul .list-item h4 {
   margin: 0 0 0.5rem 0;
   font-size: 1.1em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 85%;
+  overflow: hidden;
+  transition: all 0.5s;
 }
 main .menuDuResto__carte ul .list-item p {
   font-size: 1em;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 85%;
+  width: 80%;
   overflow: hidden;
   transition: all 0.5s;
 }
@@ -383,17 +423,61 @@ main .menuDuResto__carte ul .list-item span .fa-check-circle {
   transform: rotate(-240deg);
   transition: all 0.5s;
 }
+main .menuDuResto__carte ul .list-item {
+  animation: showingDishes 1000ms forwards;
+  opacity: 0;
+}
+main .menuDuResto__carte ul .list-item--1 {
+  animation-delay: 150ms;
+}
+main .menuDuResto__carte ul .list-item--2 {
+  animation-delay: 300ms;
+}
+main .menuDuResto__carte ul .list-item--3 {
+  animation-delay: 450ms;
+}
+main .menuDuResto__carte ul .list-item--4 {
+  animation-delay: 600ms;
+}
+main .menuDuResto__carte ul .list-item--5 {
+  animation-delay: 750ms;
+}
+main .menuDuResto__carte ul .list-item--6 {
+  animation-delay: 900ms;
+}
+main .menuDuResto__carte ul .list-item--7 {
+  animation-delay: 1050ms;
+}
+main .menuDuResto__carte ul .list-item--8 {
+  animation-delay: 1200ms;
+}
+main .menuDuResto__carte ul .list-item--9 {
+  animation-delay: 1350ms;
+}
+@keyframes showingDishes {
+  0% {
+    transform: translateY(2em);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+main .menuDuResto__carte ul .list-item:hover p {
+  width: 60%;
+}
+main .menuDuResto__carte ul .list-item:hover h4 {
+  width: 77%;
+}
+main .menuDuResto__carte ul .list-item:hover strong {
+  right: 6.5rem;
+}
 main .menuDuResto__carte ul .list-item:hover span {
-  margin-right: 5rem;
+  right: 0;
 }
 main .menuDuResto__carte ul .list-item:hover span i {
   transform: rotate(0deg);
 }
-
-@media (max-width: 1023px) {
-  .commentCaMarche {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
-  }
+main .menuDuResto__carte a {
+  justify-self: center;
 }
