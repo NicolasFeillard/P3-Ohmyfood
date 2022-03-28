@@ -379,8 +379,9 @@ main .menuDuResto__carte ul .list-item {
   position: relative;
   padding: 1rem;
   cursor: pointer;
+  background-color: #ffffff;
   overflow: hidden;
-  font-size: 1, 5em;
+  font-size: 1,5em;
 }
 main .menuDuResto__carte ul .list-item h4 {
   margin: 0 0 0.5rem 0;
