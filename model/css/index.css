@@ -82,7 +82,7 @@ header .btn__retourHome {
 footer {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat 5, 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   background-color: #353535;
@@ -318,7 +318,7 @@ main .lesRestaurants ul li a span.btn__like {
 main .menuDuResto {
   grid-template-columns: repeat(1, 1fr);
   padding: 0 0 3em;
-  justify-self: normal;
+  justify-self: normale;
   background: #f6f6f6;
 }
 main .menuDuResto__cover {
@@ -381,7 +381,7 @@ main .menuDuResto__carte ul .list-item {
   cursor: pointer;
   background-color: #ffffff;
   overflow: hidden;
-  font-size: 1,5em;
+  font-size: 1, 5em;
 }
 main .menuDuResto__carte ul .list-item h4 {
   margin: 0 0 0.5rem 0;
