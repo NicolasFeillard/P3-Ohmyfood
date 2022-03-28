@@ -6,7 +6,7 @@ main .menuDuResto, main .lesRestaurants, main .commentCaMarche, main .presentati
 }
 
 main .menuDuResto__carte h3::after {
-  border-bottom: 3px #99E2D0 solid;
+  border-bottom: 3px #99e2d0 solid;
   content: "";
   display: block;
   width: 3rem;
@@ -159,7 +159,7 @@ footer img {
   left: 0;
   right: 0;
   bottom: 0;
-  animation: spinner-border 2s linear;
+  animation: spinner-border 3s linear;
   z-index: 10;
   visibility: hidden;
 }
@@ -204,6 +204,7 @@ main .commentCaMarche ol {
   margin: 1em 1em 0;
   justify-self: normal;
   counter-reset: chiffre;
+  margin: 1rem 0 0rem 0.5rem;
 }
 @media (max-width: 960px) {
   main .commentCaMarche ol {
@@ -327,7 +328,7 @@ main .menuDuResto__cover {
   object-fit: cover;
 }
 main .menuDuResto__carte {
-  padding: 2em 1em 0;
+  padding: 2em 4em 0;
   background: #f6f6f6;
   border-radius: 3em 3em 0 0;
 }
@@ -376,10 +377,10 @@ main .menuDuResto__carte ul {
 }
 main .menuDuResto__carte ul .list-item {
   position: relative;
-  padding: 1em;
+  padding: 1rem;
   cursor: pointer;
   overflow: hidden;
-  font-size: 1.05em;
+  font-size: 1, 5em;
 }
 main .menuDuResto__carte ul .list-item h4 {
   margin: 0 0 0.5rem 0;

@@ -8,7 +8,7 @@
 %border-length-var {
 
     &::after{
-        border-bottom: 3px #99E2D0 solid;
+        border-bottom: 3px $vert-clair solid;
         content: '';
         display: block;
         width: 3rem;
