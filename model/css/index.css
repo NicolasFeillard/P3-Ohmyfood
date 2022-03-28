@@ -318,7 +318,7 @@ main .lesRestaurants ul li a span.btn__like {
 main .menuDuResto {
   grid-template-columns: repeat(1, 1fr);
   padding: 0 0 3em;
-  justify-self: normale;
+  justify-self: normal;
   background: #f6f6f6;
 }
 main .menuDuResto__cover {
