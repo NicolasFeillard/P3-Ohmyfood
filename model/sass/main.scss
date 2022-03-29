@@ -223,7 +223,7 @@ main {
         @extend %grid-center;
         @include grid-template-set(1);
         padding: 0 0 3em;
-        justify-self: normale;
+        justify-self: normal;
         background: #f6f6f6;
 
         &__cover {
@@ -286,7 +286,7 @@ main {
                     cursor: pointer;
                     background-color: $txt-fond-sombre;
                     overflow: hidden;
-                    font-size: 1,05em;
+                    font-size: 1.05em;
                 
                     & h4 {
                         margin: 0 0 0.5rem 0;
